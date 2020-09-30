@@ -1,0 +1,34 @@
+<title>Image Scrapping</title>
+<link rel="stylesheet" href="/static/style.css" type="text/css">
+
+{% block body %}
+<script>
+    <!-- alert("welcome!") -->
+    function alertText()
+    {
+    alert("please wait while we downloading the images for you")
+    }
+</script>
+<div class="btn-group">
+  <!-- <button id = "button1" class="btn btn-primary" onclick="window.location.href = 'http://127.0.0.1:8000/searchData';">Show Review Data</button> -->
+<!-- <button id = "button2" class="btn btn-primary btn-block" onclick="location.href = 'http://127.0.0.1:8000/searchResult.html';">Search Images In DB</button> -->
+
+</div>
+
+<from action="/searchImages" methods="POST">
+    <div class="user-input">
+        <div class="login-screen">
+            <div class="app-title">
+                <h1>Download image from web</h1>
+            </div>
+            <div class="login-form">
+                <div class="control_group">
+                    <input style="width:800px" type="text" class="login-field" placeholder="Enter keyword" name="keyword"></br>
+                    <input type="submit" value="submit" onlcikc="alertText()" class="btn btn-primary btn-large btn-block">
+                    <br>
+                </div>
+            </div>
+        </div>
+    </div>
+</from>
+{% endblock %}
